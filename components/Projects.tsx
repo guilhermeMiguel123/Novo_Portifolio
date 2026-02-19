@@ -37,7 +37,7 @@ const projects = [
     solution: "Arquitetura de microserviços com interface Bento Grid e atualizações em tempo real.",
     result: "Sistema escalável com alta disponibilidade e resposta inferior a 100ms.",
     tech: ["HTML/CSS", "Javascript", "SEO"],
-    image: "/projeto_3.png",
+    image: "/Projeto_3.png",
     link: "https://guilhermemiguel123.github.io/taskflow/#",
     github: "https://github.com/guilhermeMiguel123/taskflow"
   },
@@ -61,7 +61,7 @@ const projects = [
     solution: "Landing page focada em Visual Trust, usando profundidade com sombras realistas e micro-interações em JavaScript.",
     result: "Aumento de 60% no clique para agendamento via WhatsApp devido aos CTAs flutuantes.",
     tech: ["HTML/CSS", "Javascript", "SEO"],
-    image: "/projeto_5.png",
+    image: "/Projeto_5.png",
     link: "https://guilhermemiguel123.github.io/Sorrisoprime/",
     github: "https://github.com/guilhermeMiguel123/Sorrisoprime"
   },
