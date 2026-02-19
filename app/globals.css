@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-border: var(--border);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  /* === TEMA CLARO (LIGHT MODE) === */
+  /* Fundo Branco Limpo */
+  --background: #ffffff; 
+  /* Texto Preto Sólido */
+  --foreground: #020617; 
+  
+  /* Cartões levemente cinzas para destacar do fundo branco */
+  --card: #f8fafc; 
+  --card-foreground: #020617;
+  
+  /* Secundário (Tags, botões menores) */
+  --secondary: #f1f5f9; 
+  --secondary-foreground: #0f172a;
+  
+  /* Destaque (Ciano) */
+  --primary: #0891b2;
+  --primary-foreground: #ffffff;
+  
+  /* Bordas sutis */
+  --border: #e2e8f0;
+}
+
+.dark {
+  /* === TEMA ESCURO (DEEP DARK MODE) === */
+  /* Fundo: Azul Noturno Profundo (Slate 950) */
+  --background: #020617; 
+  /* Texto: Branco Puro */
+  --foreground: #ffffff; 
+  
+  /* MUDANÇA PRINCIPAL AQUI: */
+  /* Cartões agora são da MESMA cor do fundo para ficarem bem escuros */
+  --card: #020617; 
+  --card-foreground: #ffffff;
+  
+  /* Secundário escuro */
+  --secondary: #0f172a; 
+  --secondary-foreground: #ffffff;
+  
+  /* Destaque (Ciano Neon) */
+  --primary: #22d3ee;
+  --primary-foreground: #020617;
+  
+  /* Borda mais visível para separar o cartão do fundo (Slate 800) */
+  --border: #1e293b;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Transição instantânea (0.2s) para não ter delay */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Aplica transição em bordas e preenchimentos também */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
 }
